@@ -8,8 +8,8 @@ export function parseArgs(options, args) {
   if (options[key] === Boolean) {
      value = args.includes('-' + key)
   } else if (options[key] === Number) {
-     let index = args.indexOf('-' + key)
-     value = Number(args[index + 1])
+     const flagIndex = args.indexOf('-' + key)
+     value = Number(args[flagIndex + 1])
   }
   return {
     [key]: value
