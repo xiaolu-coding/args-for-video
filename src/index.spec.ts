@@ -1,7 +1,7 @@
 
 
 import { test, expect } from 'vitest'
-import { add } from './index'
+import { parseArgs } from './index'
 
 
 // 需求分析
@@ -12,7 +12,14 @@ import { add } from './index'
 // -l -> true
 
 test('当我们给定一个 -l 的时候， 应该返回 true', () => {
+  const options = {
+    'l': Boolean
+  }
 
+  const args = parseArgs(options, ['-l'])
+  expect(args).toEqual({
+    l: true
+  })
 })
 
 // -p -> 8080
@@ -43,8 +50,3 @@ test.todo('当我们给定一个 -d 的时候，应该返回字符串类型', ()
 //     d: '/usr/logs'
 //   })
 // })
-
-test('should', () => {
-  expect(true).toBe(true)
-  expect(add(1, 2)).toBe(3)
-})
