@@ -1,0 +1,23 @@
+{
+  "name": "args_for_video",
+  "version": "1.0.0",
+  "description": "实现命令行参数解析功能",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaolu-coding/args-for-video.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiaolu-coding/args-for-video/issues"
+  },
+  "homepage": "https://github.com/xiaolu-coding/args-for-video#readme",
+  "devDependencies": {
+    "vitest": "^0.7.10"
+  }
+}
