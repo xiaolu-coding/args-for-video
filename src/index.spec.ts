@@ -36,8 +36,15 @@ test('当我们给定一个 -p 的时候，应该返回数字类型', () => {
 })
 // -d -> /usr/logs
 
-test.todo('当我们给定一个 -d 的时候，应该返回字符串类型', () => {
+test('当我们给定一个 -d 的时候，应该返回字符串类型', () => {
+  const options = {
+    d: String
+  }
 
+  const args = parseArgs(options, ['-d', '/urs/logs'])
+  expect(args).toEqual({
+    d: '/url/logs'
+  })
 })
 
 // sad path
