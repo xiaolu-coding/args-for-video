@@ -51,16 +51,16 @@ test('当我们给定一个 -d 的时候，应该返回字符串类型', () => {
 // -l r  
 // -p 8080 9090 
 
-// test('happy path', () => {
-//   const options = {
-//     l: Boolean,
-//     p: Number,
-//     d: String,
-//   }
-//   const args = parseArgs(options, ['-l', '-p', '8080', '-d', '/usr/logs'])
-//   expect(args).toEqual({
-//     l: true,
-//     p: 8080,
-//     d: '/usr/logs'
-//   })
-// })
+test('happy path', () => {
+  const options = {
+    l: Boolean,
+    p: Number,
+    d: String,
+  }
+  const args = parseArgs(options, ['-l', '-p', '8080', '-d', '/usr/logs'])
+  expect(args).toEqual({
+    l: true,
+    p: 8080,
+    d: '/usr/logs'
+  })
+})
