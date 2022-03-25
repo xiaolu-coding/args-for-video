@@ -24,8 +24,15 @@ test('当我们给定一个 -l 的时候， 应该返回 true', () => {
 
 // -p -> 8080
 
-test.todo('当我们给定一个 -p 的时候，应该返回数字类型', () => {
+test('当我们给定一个 -p 的时候，应该返回数字类型', () => {
+  const options = {
+    p: Number
+  }
 
+  const args = parseArgs(options, ['-p', '8080'])
+  expect(args).toEqual({
+    p: 8080
+  })
 })
 // -d -> /usr/logs
 
