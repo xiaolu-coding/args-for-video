@@ -41,9 +41,9 @@ test('当我们给定一个 -d 的时候，应该返回字符串类型', () => {
     d: String
   }
 
-  const args = parseArgs(options, ['-d', '/urs/logs'])
+  const args = parseArgs(options, ['-d', '/usr/logs'])
   expect(args).toEqual({
-    d: '/url/logs'
+    d: '/usr/logs'
   })
 })
 
